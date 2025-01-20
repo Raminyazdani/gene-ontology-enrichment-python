@@ -1,7 +1,12 @@
-Ramin Yazdani | GO Enrichment Analyzer | main | feat(init): Initial repository setup with basic README
+Ramin Yazdani | GO Enrichment Analyzer | main | feat(config): Add Python .gitignore for project
 
-Created foundational repository structure with initial README documenting the project's purpose: Gene Ontology enrichment analysis for Arabidopsis thaliana protein sets. This sets up the basic project documentation before adding configuration files.
+Added comprehensive .gitignore file to exclude Python cache files, Jupyter checkpoints, IDE configurations, and OS-specific files. This ensures clean version control by preventing temporary and generated files from being tracked.
 
-The README provides a high-level overview of the GO enrichment analysis approach, establishing the project's direction for statistical analysis of overrepresented GO terms using Fisher's exact test.
+Includes patterns for:
+- Python bytecode and cache (__pycache__, *.pyc, *.pyo)
+- Jupyter checkpoints (.ipynb_checkpoints/)
+- Virtual environments (venv/, env/, .venv/)
+- IDE files (.vscode/, .idea/, *.swp)
+- OS files (.DS_Store, Thumbs.db)
 
-Verified: README.md created with project overview and planned analysis approach.
+Verified: .gitignore created with appropriate Python and Jupyter exclusions.
