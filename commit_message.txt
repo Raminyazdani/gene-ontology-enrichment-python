@@ -1,13 +1,15 @@
-Ramin Yazdani | GO Enrichment Analyzer | main | feat(deps): Add requirements.txt with core dependencies
+Ramin Yazdani | GO Enrichment Analyzer | main | feat(data): Add GO annotation data and protein set
 
-Defined all Python package dependencies needed for GO enrichment analysis and notebook execution. This ensures reproducibility and makes it clear what libraries are required.
+Added essential input data files for enrichment analysis, including protein sets and GO annotations from UniProt GOA database.
 
-Dependencies include:
-- pandas (>=1.3.0): Data manipulation and analysis
-- numpy (>=1.21.0): Numerical computations
-- scipy (>=1.7.0): Fisher's exact test for enrichment
-- statsmodels (>=0.13.0): FDR correction for multiple testing
-- requests (>=2.26.0): QuickGO API interactions
-- jupyter (>=1.0.0): Notebook environment
+Files added:
+- code/ex2.tsv: Curated set of 118 Arabidopsis thaliana protein IDs (UniProt format) for enrichment analysis
+- code/goa_arabidopsis.tsv: Complete GOA annotations (~159k rows) containing GO term assignments for Arabidopsis proteins
+- code/quickgo_term_info.tsv: GO term metadata including descriptions and hierarchical relationships
 
-Verified: requirements.txt created with pinned minimum versions for stability.
+Data sources:
+- GOA annotations: UniProt Gene Ontology Annotation database
+- Protein set: Curated from experimental studies
+- GO term info: QuickGO API metadata
+
+Verified: 118 protein IDs, 158,988 GO annotation rows, 60 GO term metadata entries loaded successfully.
