@@ -1,15 +1,15 @@
-Ramin Yazdani | GO Enrichment Analyzer | main | feat(data): Add GO annotation data and protein set
+Ramin Yazdani | GO Enrichment Analyzer | main | WIP(analysis): Add GO enrichment analysis notebook (initial with path bug)
 
-Added essential input data files for enrichment analysis, including protein sets and GO annotations from UniProt GOA database.
+Implemented the main GO enrichment analysis notebook with Fisher's exact test for statistical enrichment detection. This notebook performs the core functionality of identifying overrepresented GO terms in the protein set.
 
-Files added:
-- code/ex2.tsv: Curated set of 118 Arabidopsis thaliana protein IDs (UniProt format) for enrichment analysis
-- code/goa_arabidopsis.tsv: Complete GOA annotations (~159k rows) containing GO term assignments for Arabidopsis proteins
-- code/quickgo_term_info.tsv: GO term metadata including descriptions and hierarchical relationships
+Key features implemented:
+- Loads protein set and GOA annotations
+- Filters annotations (removes NOT qualifiers, IEA evidence codes)
+- Separates GO terms by aspect (Biological Process, Molecular Function, Cellular Component)
+- Calculates enrichment using Fisher's exact test (2×2 contingency table)
+- Fetches GO term descriptions from QuickGO API
+- Presents ranked results with p-values
 
-Data sources:
-- GOA annotations: UniProt Gene Ontology Annotation database
-- Protein set: Curated from experimental studies
-- GO term info: QuickGO API metadata
+Known issue: Uses absolute paths (/data/ex2.tsv, /data/goa_arabidopsis.tsv) which don't work across environments. This needs to be fixed in the next commit.
 
-Verified: 118 protein IDs, 158,988 GO annotation rows, 60 GO term metadata entries loaded successfully.
+Status: WIP - paths need correction before notebook is fully functional.
