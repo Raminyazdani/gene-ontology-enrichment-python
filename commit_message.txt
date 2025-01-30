@@ -1,12 +1,18 @@
-Ramin Yazdani | GO Enrichment Analyzer | main | feat(fix): Fix data file paths in go_enrichment.ipynb
+Ramin Yazdani | GO Enrichment Analyzer | main | feat(stats): Add FDR multiple testing correction to GO enrichment
 
-Fixed the data loading paths to use relative paths that work when running from the code/ directory. The previous version used absolute paths (/data/) from a local development environment that don't exist on other systems.
+Enhanced the GO enrichment analysis with False Discovery Rate (FDR) correction for multiple testing, which is essential when testing hundreds of GO terms simultaneously. Without correction, many false positives would be reported due to the multiple comparisons problem.
 
-Changes:
-- Changed `/data/ex2.tsv` → `./ex2.tsv`
-- Changed `/data/goa_arabidopsis.tsv` → `./goa_arabidopsis.tsv`
-- Changed `/data/quickgo_term_info.tsv` → `./quickgo_term_info.tsv`
+Enhancements:
+- Imported statsmodels.stats.multitest for FDR correction
+- Applied Benjamini-Hochberg FDR correction to p-values
+- Added q-value (FDR-adjusted p-value) column to results
+- Updated result presentation to show both p-values and q-values
+- Added significance threshold interpretation (q < 0.05)
 
-This is a realistic hotfix for a common mistake - using absolute paths from a local environment that don't work elsewhere. The relative paths now work consistently when the notebook is run from the code/ directory as documented.
+Statistical rationale:
+- When testing 100+ GO terms, expect ~5 false positives at p < 0.05 by chance
+- FDR correction controls the expected proportion of false discoveries
+- More statistical power than family-wise error rate corrections (e.g., Bonferroni)
+- Standard practice in genomics and bioinformatics enrichment analyses
 
-Verified: Notebook now loads all data files successfully when run from code/ directory. Data loads: 118 protein IDs, 158,988 GO annotations, 60 QuickGO terms.
+Verified: FDR correction applied successfully, q-values calculated for all enriched terms.
