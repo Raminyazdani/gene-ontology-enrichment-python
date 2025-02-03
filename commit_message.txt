@@ -1,18 +1,19 @@
-Ramin Yazdani | GO Enrichment Analyzer | main | feat(stats): Add FDR multiple testing correction to GO enrichment
+Ramin Yazdani | GO Enrichment Analyzer | main | feat(clustering): Add CD-HIT sequence clustering analysis notebook
 
-Enhanced the GO enrichment analysis with False Discovery Rate (FDR) correction for multiple testing, which is essential when testing hundreds of GO terms simultaneously. Without correction, many false positives would be reported due to the multiple comparisons problem.
+Created companion notebook for protein sequence clustering analysis using CD-HIT. This complements the GO enrichment analysis by helping identify redundant proteins before enrichment, which can affect statistical significance.
 
-Enhancements:
-- Imported statsmodels.stats.multitest for FDR correction
-- Applied Benjamini-Hochberg FDR correction to p-values
-- Added q-value (FDR-adjusted p-value) column to results
-- Updated result presentation to show both p-values and q-values
-- Added significance threshold interpretation (q < 0.05)
+Key features:
+- CD-HIT installation and setup instructions
+- Clustering at multiple identity thresholds (40%, 50%, 70%, 90%, 95%)
+- Cluster distribution analysis and visualization
+- Representative sequence selection from each cluster
 
-Statistical rationale:
-- When testing 100+ GO terms, expect ~5 false positives at p < 0.05 by chance
-- FDR correction controls the expected proportion of false discoveries
-- More statistical power than family-wise error rate corrections (e.g., Bonferroni)
-- Standard practice in genomics and bioinformatics enrichment analyses
+Analysis workflow:
+1. Clone and build CD-HIT from source
+2. Run clustering at different identity thresholds
+3. Analyze cluster size distributions
+4. Generate representative protein sets for downstream analysis
 
-Verified: FDR correction applied successfully, q-values calculated for all enriched terms.
+Use case: Removing redundant sequences before GO enrichment prevents bias from over-represented protein families and improves statistical validity of enrichment results.
+
+Verified: Notebook structure complete with clustering workflow documented.
