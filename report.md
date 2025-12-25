@@ -176,5 +176,21 @@ Decision: Keep relative paths with clear documentation
 ### 3.7 Verification Status
 Next: Need to verify notebooks run successfully
 
+### 3.8 Requirements.txt Update
+- Added missing dependencies: scipy>=1.7.0, statsmodels>=0.13.0, numpy>=1.21.0
+- These were used in notebooks but not documented in requirements.txt
+
+### 3.9 Verification Completed
+**Tested:** go_enrichment.ipynb data loading
+- All imports successful (pandas, numpy, scipy, statsmodels)
+- Protein set loaded: 118 unique Uniprot IDs
+- GOA annotations loaded: 158,988 rows × 5 columns
+- Files accessible from code/ directory as expected
+
+**Result:** ✓ Notebooks are runnable with correct dependencies
+
 ---
+
+## Phase 4: Git Historian
+
 
