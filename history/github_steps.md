@@ -18,7 +18,7 @@ This expansion creates a more granular, realistic development history by:
 3. Maintaining identical final state
 
 **Mapping:**
-- Old step 01 (Initial setup) → **New steps 01-02** (split: README/LICENSE separate from .gitignore)
+- Old step 01 (Initial setup) → **New steps 01-02** (split: README separate from .gitignore)
 - Old step 02 (Add requirements) → **New step 03** (same)
 - Old step 03 (Add data) → **New step 04** (same)
 - Old step 04 (GO enrichment) → **New steps 05-07** (split: initial version with bug, hotfix, then FDR enhancement)
@@ -61,15 +61,14 @@ This project evolved from an initial idea to perform Gene Ontology enrichment an
 ## Step-by-Step History
 
 ### Step 01: Initial Repository Setup
-**Commit Message:** `Initial commit: Set up basic repository structure`
+**Commit Message:** `Initial commit: Add basic README`
 
-**Description:** Created the foundational repository files - README with basic project description and LICENSE.
+**Description:** Created the foundational repository with a basic README describing the project.
 
 **Files Created:**
 - README.md (basic project overview)
-- LICENSE (MIT license)
 
-**Rationale:** Standard repository initialization. Starting with just the core documentation files before adding configuration.
+**Rationale:** Standard repository initialization. Starting with just the core documentation before adding configuration.
 
 ---
 
