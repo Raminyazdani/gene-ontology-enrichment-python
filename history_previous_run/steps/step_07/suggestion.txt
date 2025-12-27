@@ -1,0 +1,13 @@
+TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
+RENAME	README.md	line 32	pobd4/	Remove "pobd4/" reference (use gene-ontology-enrichment-python or current repo name)	Academic folder name should be removed	APPLIED
+TRACE	README.md	line 34	│   ├── assignment_4_1.ipynb    # GO analysis part 1	Update to: │   ├── clustering_analysis.ipynb    # CD-HIT clustering	Academic terminology in filename	APPLIED
+TRACE	README.md	line 35	│   └── assignment_4_2.ipynb    # GO analysis part 2	Update to: │   └── go_enrichment.ipynb    # GO enrichment analysis	Academic terminology in filename	APPLIED
+RENAME	README.md	line 51	cd pobd4/code	Update to: cd code	Academic folder name should be removed	APPLIED
+RENAME	code/assignment_4_1.ipynb	filename	assignment_4_1.ipynb	Rename to: clustering_analysis.ipynb	Academic naming convention should be removed	APPLIED
+RENAME	code/assignment_4_2.ipynb	filename	assignment_4_2.ipynb	Rename to: go_enrichment.ipynb	Academic naming convention should be removed	APPLIED
+TRACE	code/assignment_4_1.ipynb	cell[0] (markdown)	# Processing of Biological Data **Prof. Dr. Volkhard Helms** **Tutor:** Hanah Robertson **Winter Semester 2025–26** **Saarland University – Chair for Computational Biology** ## Exercise Sheet 4	Replace with professional title: # CD-HIT Protein Sequence Clustering Analysis	Contains course/academic information (professor, tutor, semester, matriculation numbers)	APPLIED
+TRACE	code/assignment_4_1.ipynb	cell[1] (markdown)	## Exercise Sheet 4 – Exercise 4.2	Remove this cell or replace with descriptive section header	Academic exercise reference	APPLIED
+TRACE	code/assignment_4_2.ipynb	cell[0] (markdown)	# Processing of Biological Data Prof. Dr. V. Bafna – Chair for Computational Biology ## Exercise Sheet 4 – Exercise 4.2 Gene Ontology enrichment analysis	Replace with professional title: # Gene Ontology Enrichment Analysis for Arabidopsis thaliana	Contains course/academic information	APPLIED
+PATH	code/assignment_4_2.ipynb	cell[5] (code)	protein_set_path = "./ex2.tsv" goa_path = "./goa_arabidopsis.tsv"	Use pathlib: from pathlib import Path; notebook_dir = Path(__file__).parent if in .py else Path.cwd(); protein_set_path = notebook_dir / "ex2.tsv"	Relative path assumes running from code/ directory; fragile	APPLIED
+DOC	README.md	line 69	Originally created in an academic setting	Remove this line	Unnecessary academic reference	APPLIED
+STRUCTURE	README.md	Section missing	No .gitignore mentioned	Document that .gitignore should exist for Python projects	Should verify .gitignore exists	APPLIED

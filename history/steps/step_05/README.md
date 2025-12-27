@@ -1,22 +1,21 @@
 # GO Enrichment Analyzer for Arabidopsis
 
-Gene Ontology enrichment analysis for Arabidopsis thaliana protein sets.
+A Python-based tool for Gene Ontology enrichment analysis on Arabidopsis thaliana protein sets.
 
 ## Overview
 
-This project performs statistical GO enrichment analysis to identify overrepresented biological functions in protein sets.
+This project performs statistical GO term enrichment analysis to identify overrepresented biological processes, molecular functions, and cellular components in protein sets of interest.
 
-## Tech Stack
+## Features
 
-- Python 3.x
-- Jupyter Notebook
-- Bioinformatics libraries
+- Fisher's exact test for statistical enrichment
+- Multiple testing correction
+- GO annotation processing from UniProt GOA
+- Arabidopsis thaliana focus
 
-## Setup
+## Getting Started
 
-```bash
-pip install -r requirements.txt
-```
+Coming soon - detailed setup and usage instructions.
 
 ## License
 
